@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form</title>
+  <link rel="stylesheet" href="css/final.css" />
+</head>
+
+<body>
+  <div class="container mx-auto mt-10">
+    <div class="max-w-md mx-auto bg-white rounded-lg overflow-hidden md:max-w-lg">
+      <div class="md:flex">
+        <div class="w-full p-4 px-5 py-5">
+          <div class="md:grid md:grid-cols-3 gap-2">
+            <div class="col-span-3 md:col-span-2">
+              <label for="Nama" class="block text-gray-700 font-bold mb-2">Name:</label>
+              <input type="text" id="InputName" name="Nama" placeholder="min: 10 character"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+            </div>
+          </div>
+          <div class="md:grid md:grid-cols-3 gap-2">
+            <div class="col-span-3 md:col-span-2">
+              <label for="age" class="block text-gray-700 font-bold mb-2">Age:</label>
+              <input type="number" id="InputAge" name="age" placeholder="min: 25 Thn"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+            </div>
+          </div>
+          <div class="md:grid md:grid-cols-3 gap-2, mb-6">
+            <div class="col-span-3 md:col-span-2">
+              <label for="money" class="block text-gray-700 font-bold mb-2">Money:</label>
+              <input type="number" id="InputMoney" name="money" placeholder="min: Rp 100.000 - max: Rp 1.000.000"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+            </div>
+          </div>
+          <button type="submit"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            onclick="submitButton()">
+            Submit
+          </button>
+          <button type="submit"
+            class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            onclick="resumeButton()">
+            Resume
+          </button>
+        </div>
+      </div>
+      <div class="justify-center content-center">
+        <table id="myTable" class="table-auto border-collapse border border-gray-400 text-center">
+          <tr>
+            <th class="px-4 py-2 text-gray-800 table-auto border-collapse border border-gray-400">Name</th>
+            <th class="px-4 py-2 text-gray-800 table-auto border-collapse border border-gray-400">Age</th>
+            <th class="px-4 py-2 text-gray-800 table-auto border-collapse border border-gray-400">Money</th>
+          </tr>
+        </table>
+        <p class="m-3 text-lg font-bold text-gray-800">Result Resume: </p>
+        <p id="dataResume" class="text-center mb-6">__</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
