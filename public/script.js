@@ -28,8 +28,6 @@ function submitButton() {
 }
 
 function resumeButton() {
-  nilaiTotal(nilaiAge);
-  nilaiTotal(nilaiMoney);
   const avgAge = nilaiAverage(nilaiAge);
   const avgMoney = nilaiAverage(nilaiMoney);
   document.getElementById("dataResume").innerHTML =
@@ -52,7 +50,11 @@ function nilaiTotal(angka) {
 }
 
 function nilaiAverage(angka) {
-  let average = 0;
-  average = nilaiTotal(angka) / angka.length;
+  let total = 0;
+  for (let i = 0; i < angka.length; i++) {
+    total += angka[i];
+  }
+
+  let average = nilaiTotal(angka) / angka.length;
   return average;
 }
