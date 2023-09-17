@@ -41,20 +41,11 @@ function resumeButton() {
 const nilaiAge = [];
 const nilaiMoney = [];
 
-function nilaiTotal(angka) {
-  let total = 0;
-  for (let i = 0; i < angka.length; i++) {
-    total += angka[i];
-  }
-  return total;
-}
-
 function nilaiAverage(angka) {
   let total = 0;
   for (let i = 0; i < angka.length; i++) {
     total += angka[i];
   }
-
   let average = nilaiTotal(angka) / angka.length;
   return average;
 }
